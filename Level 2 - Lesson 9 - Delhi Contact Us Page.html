@@ -1,7 +1,37 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+function validate(){
+ var name1 = document.getElementById("name").value;
+ var phone1 = document.getElementById("phone").value;
+ var email1 = document.getElementById("email").value;
+ var message1 = document.getElementById("message").value;
+
+if(name1.length < 5){
+ text = "Please Enter Your Full Name";
+ error_message.innerHTML = text;
+ return false;
+}
+if(isNaN(phone1) || phone1.length !=10){
+ text = "Please Enter A Valid Number";
+ error_message.innerHTML = text;
+ return false;
+}
+if(email1.indexOf("@") == -1 || email.length < 6){
+ text = "Please Enter A Valid Email";
+ error_message.innerHTML = text;
+ return false;
+}
+if(message1.length <= 130){
+ text = "Please Enter More Than 130 Characters";
+ error_message.innerHTML = text;
+ return false;
+}
+alert("Form Submitted Successfully!");
+return true;
+}
+</script>
 <style>
 Header{background-color: DarkSalmon;
 Font-family: Times New Roman;
@@ -19,47 +49,73 @@ Display: inline-block;
 Padding: 5px;
 Margin: 10px;
 Align: center;}
-apple{border: DarkSlateBlue;
+wrapper{
+Padding = "50px";
+Text-align = "center";
+Background-color: SeaShell;}
+
+#myform{
 Background-color: PowderBlue;
 Text-align: center;
-Padding: 5px;}
+Padding: 5px;
+Margin-left: 400px;
+Margin-right: 400px;
+Border: white;}
 
-a:link{color:white;
-Text-decoration: none;}
+.input_field input[type = "text"], .input_field textarea{
+Padding: 10px;
+Margin: 10px;
+Background-color: rgb(214, 245, 244);}
+#error_message{
+color: Crimson;}
 
-
-a:hover{color: LightSteelBlue;
-Text-decoration: underline;}
+input[type = submit]{
+Background-color: rgb(101, 133, 231);
+Padding: 12px;
+Padding-left: 25px;
+Padding-right: 25px;
+Border: white;
+Cursor: pointer;}
 </style>
 </head>
 <body>
+<!--You can put a:hover{color: Black; Text-decoration: underline;} if you want a cool hover effect on your links but it isn't working in this project-->
 <header>
 <h1>Delhi</h1> 
 <nav>
 <ul>
- <li><a href = "Level 2 - Lesson 7 - Delhi Home Page.html">Home</a></li>
- <li><a href = "Level 2 - Lesson 8 - Delhi Hotel Page.html">Hotels</a></li>
- <li><a href = "Level 2 - Lesson 9 -Delhi Street Food Page.html">Street Food</a></li>
- <li><a href = "Level 2 - Lesson 9 - Delhi Contact Us Page.html">Contact Us</a></li>
+ <li><a href = "Level 2 - Lesson 7 - Delhi Home Page.html" style = "color: white">Home</a></li>
+ <li><a href = "Level 2 - Lesson 8 - Delhi Hotel Page.html" style = "color: white">Hotels</a></li>
+ <li><a href = "Level 2 - Lesson 9 -Delhi Street Food Page.html" style = "color: white">Street Food</a></li>
+ <li><a href = "Level 2 - Lesson 9 - Delhi Contact Us Page.html" style = "color: white">Contact Us</a></li>
 </ul>
 </nav>
 </header>
+<main>
+ <div class = "wrapper">
+  <h2 align = "center">Contact Us</h2>
+  <form id = "myform" onsubmit = "return validate();">
+   <div class = "input_field">
+    <input type = "text" placeholder = "Name" id = "name">
+   </div>
+   <div class = "input_field">
+    <input type = "text" placeholder = "Phone Number" id = "phone">
+   </div>
+   <div class = "input_field">
+    <input type = "text" placeholder = "Email" id = "email">
+   </div>
+   <div class = "input_field">
+    <textarea placeholder = "Message" id = "message"></textarea>
+   </div>
+   <div class = "btn">
+    <input type = "submit">
+   </div>
 <br>
-<h2 align = "center">Contact Us</h2>
-<div class = "apple">
-First Name:<input type = "text" name = "Fname" id = "Fname" value = "" placeholder = "First Name">
-<br>
-Last Name:<input type = "text" name = "Fname" id = "Fname" value = "" placeholder = "Last Name">
-<br>
-Email:<input type = "text" name = "Fname" id = "Fname" value = "" placeholder = "Email@">
-<br>
-Message:
-<br>
-<textarea placeholder = "Message" id = "Message" cols = "20" rows = "4"></textarea>
-<br>
-<input type = "reset" value = "Submit">
+<div id = "error_message"></div>
+ </form>
 </div>
+</main>
 <footer>
-<h3>This website is made by <a href = "https://www.mindchamp.in" target = "_blank">Mindchamp</a></h3></footer>
+<h3>This website is made by <a href = "https://www.mindchamp.in" target = "_blank" style = "color: white">Mindchamp</a></h3></footer>
 </body>
 </html>
