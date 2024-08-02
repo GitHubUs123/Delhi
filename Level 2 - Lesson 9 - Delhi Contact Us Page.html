@@ -80,6 +80,22 @@ Padding-left: 25px;
 Padding-right: 25px;
 Border: white;
 Cursor: pointer;}
+
+.animation{
+Height: 30px;
+Width: 30px;
+Background: Maroon;
+Border-radius: 50%;
+Position: absolute;
+Animation: animation-animation 12s infinite;
+}
+@keyframes animation-animation{
+  0%{top:199px; left:380px;}
+  25%{top:199px; left: 1060px;}
+  50%{top:550px; left: 1060px;}
+  75%{top:550px; left: 380px;}
+  100%{top:199px; left: 380px;}
+}
 </style>
 </head>
 <body>
@@ -96,8 +112,10 @@ Cursor: pointer;}
 </nav>
 </header>
 <main>
+<div class = "animation"></div>
  <div class = "wrapper">
   <h2 align = "center">Contact Us</h2>
+<br>
   <form id = "myform" onsubmit = "return validate();">
    <div class = "input_field">
     <input type = "text" placeholder = "Name" id = "name">
@@ -119,6 +137,7 @@ Cursor: pointer;}
  </form>
 </div>
 </main>
+<br>
 <footer>
 <h3>This website is made by <a href = "https://www.mindchamp.in" target = "_blank" style = "color: white">Mindchamp</a></h3></footer>
 </body>
