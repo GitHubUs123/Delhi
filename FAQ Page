@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+Header{background-color: Navy;
+Font-family: Times New Roman;
+Text-align: center;
+Width: 100%;
+Height: 120px;
+Font-weight: bold;
+Margin: 5px;}
+Footer{background-color: Navy;
+width: 100%;
+Color: white;
+Text-align: center;}
+
+nav ul li{ list-style-type: none;
+Display: inline-block;
+Padding: 5px;
+Margin: 10px;
+Align: center;}
+
+.table-class thead th{
+Background: Maroon;
+Color: white;
+Padding: 5px;
+Border-collapse: collapse;}
+
+.table-class tbody td{
+Background-color: rgb(118, 160, 239);
+Text-align: center;
+Padding: 5px;
+Border-collapse: collapse;}
+
+.faq3{
+margin: 10px;
+Postion: relative;
+Cursor: pinter;
+Text-align: left;
+Diplsya: inline-block;}
+
+
+.faq2{
+List-style: none;}
+
+.faq3 span{
+Position: aboslute;
+Top: 0;
+Right: 5px;
+Font-size: 13px;}
+
+.answer{
+Display: none;
+Padding: 5px 0px;
+Margin-bottom: 15px;
+Font-size: 12px;}
+
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$('.faq3').click(function(){
+var = $answer = $(this).find('.answer');
+if($answer.hasClass('open')) {
+$answer.removeClass('open');
+$answer.slideUp();
+
+$(this).find('span').text('+');
+} else {
+$answer.addClass('open');
+$answer.slideDown();
+
+$(this).find('span').text('-');
+}
+});
+});
+</script>
+</head>
+<body>
+<!--You can put a:hover{color: Black; Text-decoration: underline;} if you want a cool hover effect on your links but it isn't working in this project-->
+<!--You can put .table-class tbody{tr:nth-child(even){background-color: rgb(0, 153, 153);} but it doesn't work right now-->
+<header>
+<h1 style = "color: White">Delhi</h1>
+<nav>
+<ul>
+ <li><a href = "Level 2 - Lesson 7 - Delhi Home Page.html" style = "color: white">Home</a></li>
+ <li><a href = "Level 2 - Lesson 8 - Delhi Hotel Page.html" style = "color: white">Hotels</a></li>
+ <li><a href = "Level 2 - Lesson 9 -Delhi Street Food Page.html" style = "color: white">Street Food</a></li>
+ <li><a href = "Level 2 - Lesson 9 - Delhi Contact Us Page.html" style = "color: white">Contact Us</a></li>
+ <li><a href = "Level 3 - Lesson 8 - Delhi FAQ Page.html" style = "color: white">FAQ Page</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<div class = "faq">
+<ul class = "faq2">
+ <li class = "faq3">
+  <h3 class = "question">What is the name of the person who created this website?</h3>
+  <span>+</span>
+  <div class = "answer">
+   <p>My name is Kiara</p>
+  </div>
+ </li>
+ <li class = "faq">
+  <h3 class = "question">How old is the person who created this website?</h3>
+  <span>+</span>
+  <div class = "answer">
+   <p>I am 12 years old, soon to be 13</p>
+  </div>
+ </li>
+</ul>
+</div>
+</body>
+<footer>
+<h3>This website is made by <a href = "https://www.mindchamp.in" target = "_blank" style = "color: white">Mindchamp</a></h3></footer>
+</html>
+
