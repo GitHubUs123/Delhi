@@ -48,8 +48,27 @@ Margin-left: auto;
 Margin-right: auto;
 Width: 50%;}
 
+.text-active{
+display: block;}
 
+.img2{
+display: none;
+}
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(function(){
+$(".picture").hover(
+function(){
+$(this).find(".img2").addClass("text-active");
+},
+function(){
+$(this).find(".img2").removeClass("text-active");
+}
+);
+});
+</script>
 </head>
 <body>
 <!--You can put a:hover{color: Black; Text-decoration: underline;} if you want a cool hover effect on your links but it isn't working in this project-->
@@ -79,8 +98,12 @@ Width: 50%;}
 <section>
 <h1>Atractions of Delhi</h2>
 <h2>India Gate</h3>
+
+<div class = "picture">
 <img src = "indiagate.jpeg" class="center">
-<p>The India Gate (formerly known as All India War Memorial) is a war memorial located near the Kartavya path. It stands as a memorial to 74,187 soldiers of the Indian Army who died between 1914 and 1921 in the First World War, in France, Flanders, Mesopotamia, Persia, East Africa, Gallipoli and elsewhere in the Near and the Far East, and the Third Anglo-Afghan War. It is often compared to the Arc de Triomphe in Paris, and the Gateway of India in Mumbai.</p>
+
+<p class = "img2">The India Gate (formerly known as All India War Memorial) is a war memorial located near the Kartavya path. It stands as a memorial to 74,187 soldiers of the Indian Army who died between 1914 and 1921 in the First World War, in France, Flanders, Mesopotamia, Persia, East Africa, Gallipoli and elsewhere in the Near and the Far East, and the Third Anglo-Afghan War. It is often compared to the Arc de Triomphe in Paris, and the Gateway of India in Mumbai.</p>
+</div>
 <br>
 <h2>Redfort</h2>
 <img src = "redfort.jpeg" class="center">
