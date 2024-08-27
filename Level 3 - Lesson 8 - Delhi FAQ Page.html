@@ -34,17 +34,17 @@ Border-collapse: collapse;}
 
 .faq3{
 margin: 10px;
-Postion: relative;
-Cursor: pinter;
+Position: relative;
+Cursor: pointer;
 Text-align: left;
-Diplsya: inline-block;}
+Background-color: rgb(128, 191, 255);}
 
 
 .faq2{
 List-style: none;}
 
 .faq3 span{
-Position: aboslute;
+Position: absolute;
 Top: 0;
 Right: 5px;
 Font-size: 13px;}
@@ -53,15 +53,16 @@ Font-size: 13px;}
 Display: none;
 Padding: 5px 0px;
 Margin-bottom: 15px;
-Font-size: 12px;}
+Font-size: 15px;}
 
 
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+$(function(){
 $('.faq3').click(function(){
-var = $answer = $(this).find('.answer');
+var $answer = $(this).find('.answer');
 if($answer.hasClass('open')) {
 $answer.removeClass('open');
 $answer.slideUp();
@@ -96,23 +97,22 @@ $(this).find('span').text('-');
 <div class = "faq">
 <ul class = "faq2">
  <li class = "faq3">
-  <h3 class = "question">What is the name of the person who created this website?</h3>
-  <span>+</span>
+  <h3 class = "question">What is the name of the person who created this website?
+<span>+</span></h3>
   <div class = "answer">
    <p>My name is Kiara</p>
   </div>
  </li>
- <li class = "faq">
-  <h3 class = "question">How old is the person who created this website?</h3>
-  <span>+</span>
+ <li class = "faq3">
+  <h3 class = "question">How old is the person who created this website?
+ <span>+</span></h3>
   <div class = "answer">
-   <p>I am 12 years old, soon to be 13</p>
+   <p>I am 12 years old</p>
   </div>
  </li>
 </ul>
 </div>
+<footer><h3>This website is made by <a href = "https://www.mindchamp.in" target = "_blank" style = "color: white">Mindchamp</a></h3></footer>
 </body>
-<footer>
-<h3>This website is made by <a href = "https://www.mindchamp.in" target = "_blank" style = "color: white">Mindchamp</a></h3></footer>
-</html>
 
+</html>
