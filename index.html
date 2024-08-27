@@ -51,8 +51,8 @@ Width: 50%;}
 .text-active{
 display: block;}
 
-.img2{
-display: none;
+.text-inactive{
+Display: none;
 }
 </style>
 
@@ -61,10 +61,12 @@ display: none;
 $(function(){
 $(".picture").hover(
 function(){
-$(this).find(".img2").addClass("text-active");
+$(this).find("#img2").addClass("text-active");
+$(this).find("#img2").removeClass("text-inactive");
 },
 function(){
-$(this).find(".img2").removeClass("text-active");
+$(this).find("#img2").removeClass("text-active");
+$(this).find("#img2).addClass("text-inactive");
 }
 );
 });
@@ -102,7 +104,7 @@ $(this).find(".img2").removeClass("text-active");
 <div class = "picture">
 <img src = "indiagate.jpeg" class="center">
 
-<p class = "img2">The India Gate (formerly known as All India War Memorial) is a war memorial located near the Kartavya path. It stands as a memorial to 74,187 soldiers of the Indian Army who died between 1914 and 1921 in the First World War, in France, Flanders, Mesopotamia, Persia, East Africa, Gallipoli and elsewhere in the Near and the Far East, and the Third Anglo-Afghan War. It is often compared to the Arc de Triomphe in Paris, and the Gateway of India in Mumbai.</p>
+<p id = "img2" class = "text-inactive">The India Gate (formerly known as All India War Memorial) is a war memorial located near the Kartavya path. It stands as a memorial to 74,187 soldiers of the Indian Army who died between 1914 and 1921 in the First World War, in France, Flanders, Mesopotamia, Persia, East Africa, Gallipoli and elsewhere in the Near and the Far East, and the Third Anglo-Afghan War. It is often compared to the Arc de Triomphe in Paris, and the Gateway of India in Mumbai.</p>
 </div>
 <br>
 <h2>Redfort</h2>
