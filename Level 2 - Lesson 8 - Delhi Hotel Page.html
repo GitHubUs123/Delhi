@@ -32,8 +32,38 @@ Text-align: center;
 Padding: 5px;
 Border-collapse: collapse;}
 
+.haha{
+Cursor: pointer;}
+
+.haha2{
+Display: none;}
+
+td, tr{
+Min-height: 50px;}
+
+pre{
+Text-align: left;}
+
+#haha3{
+Cursor: pointer;}
+
 
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(function(){
+$("#haha3").hover(
+function(){
+$(".haha").fadeOut();
+$(".haha2").fadeIn();
+},
+function(){
+$(".haha").fadeIn();
+$(".haha2").fadeOut();
+}
+);
+});
+</script>
 </head>
 <body>
 <!--You can put a:hover{color: Black; Text-decoration: underline;} if you want a cool hover effect on your links but it isn't working in this project-->
@@ -42,7 +72,7 @@ Border-collapse: collapse;}
 <h1 style = "color: White">Delhi</h1>
 <nav>
 <ul>
- <li><a href = "index.html" style = "color: white">Home</a></li>
+ <li><a href = "Level 2 - Lesson 7 - Delhi Home Page.html" style = "color: white">Home</a></li>
  <li><a href = "Level 2 - Lesson 8 - Delhi Hotel Page.html" style = "color: white">Hotels</a></li>
  <li><a href = "Level 2 - Lesson 9 -Delhi Street Food Page.html" style = "color: white">Street Food</a></li>
  <li><a href = "Level 2 - Lesson 9 - Delhi Contact Us Page.html" style = "color: white">Contact Us</a></li>
@@ -66,7 +96,8 @@ Border-collapse: collapse;}
 <h3>The Andaz by Hyatt</h3>
 </td>
 <td>From 11,069.38 rupees per night for one adult</td>
-<td>Outdoor swimming pool, airport shuttle, fitness centre, non-smoking rooms, free WiFi, spa and wellness centre, restaurant, tea/coffee maker in all rooms, bar, fabulous breakfast</td>
+<td>
+Outdoor swimming pool, airport shuttle, fitness centre, non-smoking rooms, free WiFi, spa and wellness centre, restaurant, tea/coffee maker in all rooms, bar, fabulous breakfast</td>
 </tr>
 <tr>
 <td>
@@ -79,7 +110,7 @@ Border-collapse: collapse;}
 <tr>
 <td>
 <img src = "oop.jpeg">
-<h3>Hotel Blue Pearl</h3>
+<h3>Hotel Blue Pearl</h3></td>
 <td>From 2,168.38 rupees per night for one adult</td>
 <td>Non-smoking rooms, free WiFi, room service, facilities for disabled guests, family rooms, 24-hour front desk, laundry, daily housekeeping, tea/coffee maker in all rooms, good breakfast</td>
 </tr>
@@ -110,6 +141,3 @@ Border-collapse: collapse;}
 <h3>This website is made by <a href ="https://www.mindchamp.in" target = "_blank" style = "color: white">Mindchamp</a></h3></footer>
 </body>
 </html>
-
-
-
