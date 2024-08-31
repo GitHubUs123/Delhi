@@ -61,14 +61,13 @@ Display: none;
 $(function(){
 $(".picture").hover(
 function(){
-$(this).find("#img2").addClass("text-active");
-$(this).find("#img2").removeClass("text-inactive");
+$(this).find("#img2").fadeIn('slow').addClass("text-active").removeClass("text-inactive");
 },
 function(){
-$(this).find("#img2").removeClass("text-active");
-$(this).find("#img2).addClass("text-inactive");
+$(this).find("#img2").fadeOut('slow').removeClass("text-active").addClass("text-inactive");
 }
 );
+
 });
 </script>
 </head>
@@ -78,7 +77,7 @@ $(this).find("#img2).addClass("text-inactive");
 <h1 style = "color: White">Delhi</h1> 
 <nav>
 <ul>
- <li><a href = "index.html" style = "color: white">Home</a></li>
+ <li><a href = "#" style = "color: white">Home</a></li>
  <li><a href = "Level 2 - Lesson 8 - Delhi Hotel Page.html" style = "color: white">Hotels</a></li>
  <li><a href = "Level 2 - Lesson 9 -Delhi Street Food Page.html" style = "color: white">Street Food</a></li>
  <li><a href = "Level 2 - Lesson 9 - Delhi Contact Us Page.html" style = "color: white">Contact Us</a></li>
@@ -99,8 +98,8 @@ $(this).find("#img2).addClass("text-inactive");
 <br>
 <section>
 <h1>Atractions of Delhi</h2>
-<h2>India Gate</h3>
 
+<h2>India Gate</h3>
 <div class = "picture">
 <img src = "indiagate.jpeg" class="center">
 
@@ -108,12 +107,15 @@ $(this).find("#img2).addClass("text-inactive");
 </div>
 <br>
 <h2>Redfort</h2>
+<div class = "picture">
 <img src = "redfort.jpeg" class="center">
-<p>The Red Fort or Lal Qila (Hindustani: [laːl qiːlaː]) is a historic fort in the Old Delhi neighbourhood of Delhi, India, that historically served as the main residence of the Mughal emperors. Emperor Shah Jahan commissioned construction of the Red Fort on 12 May 1639, when he decided to shift his capital from Agra to Delhi. Originally red and white, its design is credited to architect Ustad Ahmad Lahori, who also constructed the Taj Mahal.</p>
+<p id = "img2">The Red Fort or Lal Qila (Hindustani: [laːl qiːlaː]) is a historic fort in the Old Delhi neighbourhood of Delhi, India, that historically served as the main residence of the Mughal emperors. Emperor Shah Jahan commissioned construction of the Red Fort on 12 May 1639, when he decided to shift his capital from Agra to Delhi. Originally red and white, its design is credited to architect Ustad Ahmad Lahori, who also constructed the Taj Mahal.</p>
+</div>
 <br>
 <h2>Lotus Temple</h2>
+<div class = "picture">
 <img src = "lotustemple.jpeg" class="center">
-<p>The Lotus Temple, located in New Delhi, India, is a Baháʼí House of Worship that was dedicated in December 1986. Notable for its lotus-like shape, it has become a prominent attraction in the city. The building is composed of 27 free-standing marble-clad "petals" arranged in clusters of three to form nine sides, with nine doors opening onto a central hall with a height of slightly over 34 metres and a capacity of 1,300 people. The Lotus Temple has won numerous architectural awards and has been featured in many newspaper and magazine articles.</p>
+<p id = "img2">The Lotus Temple, located in New Delhi, India, is a Baháʼí House of Worship that was dedicated in December 1986. Notable for its lotus-like shape, it has become a prominent attraction in the city. The building is composed of 27 free-standing marble-clad "petals" arranged in clusters of three to form nine sides, with nine doors opening onto a central hall with a height of slightly over 34 metres and a capacity of 1,300 people. The Lotus Temple has won numerous architectural awards and has been featured in many newspaper and magazine articles.</p>
 </section>
 <footer>
 <h3>This website is made by <a href = "https://www.mindchamp.in" target = "_blank" style = "color: white">Mindchamp</a></h3></footer>
